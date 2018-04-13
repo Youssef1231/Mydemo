@@ -1,4 +1,4 @@
-package fiel;
+package file;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,13 +9,14 @@ public class PrintStreamDemo {
 
 		//demonstrate the PrintStream
 		try (
-				FileOutputStream fos = new FileOutputStream("src\\fiel\\test.txt");
+				FileOutputStream fos = new FileOutputStream("src\\file\\test.txt");
 				PrintStream ps = new PrintStream(fos)
 		) {
 			ps.println("普通字符串");
 			ps.println(new PrintStreamDemo());
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
+
 		}
 	}
 }

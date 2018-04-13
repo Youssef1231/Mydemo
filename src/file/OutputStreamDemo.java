@@ -1,4 +1,4 @@
-package fiel;
+package file;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -10,8 +10,8 @@ public class OutputStreamDemo {
 		//we can ignore the finally by using the try(),and in the last sentence we could not use the ";"
 		try (
 			//new a input source and output source
-			FileInputStream fis = new FileInputStream("src\\fiel\\OutputStreamDemo.java");
-			FileOutputStream fos = new FileOutputStream("src\\fiel\\newFile.txt"))
+			FileInputStream fis = new FileInputStream("src\\file\\OutputStreamDemo.java");
+			FileOutputStream fos = new FileOutputStream("src\\file\\newFile.txt"))
 			// make a container
 		{	byte[] bbuf = new byte[32];
 			//indicator

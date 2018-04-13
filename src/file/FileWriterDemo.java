@@ -1,4 +1,4 @@
-package fiel;
+package file;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,7 +7,7 @@ public class FileWriterDemo {
 	public static void main(String[] args) {
 		//Demonstrate the FileWriter
 		try (
-				FileWriter fw = new FileWriter("src\\fiel\\peom.txt")) {
+				FileWriter fw = new FileWriter("src\\file\\peom.txt")) {
 			fw.write("李白-静夜思\r\n");
 			fw.write("\r\n");
 			fw.write("窗前明月光，\r\n");
