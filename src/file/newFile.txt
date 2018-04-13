@@ -6,6 +6,8 @@ import java.io.IOException;
 
 public class OutputStreamDemo {
 	public static void main(String[] args) {
+
+		//we can ignore the finally by using the try(),and in the last sentence we could not use the ";"
 		try (
 			//new a input source and output source
 			FileInputStream fis = new FileInputStream("src\\file\\OutputStreamDemo.java");
