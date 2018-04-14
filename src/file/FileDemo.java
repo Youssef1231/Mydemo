@@ -8,7 +8,12 @@ public class FileDemo {
 			throws IOException {
 		//This will demonstration the File Class
 		//First of all mk a file
-		File file = new File("ew.txt");
+		File file = null;
+		try {
+			file = new File("ew.txt");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		file.createNewFile();
 		System.out.println(file.mkdir());
 		String[] fileList = file.list();
