@@ -1,5 +1,6 @@
 package file;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -17,6 +18,19 @@ public class PrintStreamDemo {
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 
+		}
+//		use the setOut and system.out.println method doing it again
+		try(
+				PrintStream ps1 = new PrintStream(new FileOutputStream("src\\file\\text2.txt")))
+
+		{
+			System.setOut(ps1);
+			System.out.println("普通字符串");
+			System.out.println(new PrintStreamDemo());
+
+		}
+		catch (FileNotFoundException ex) {
+			ex.printStackTrace();
 		}
 	}
 }
