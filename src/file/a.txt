@@ -1,0 +1,25 @@
+package file;
+
+
+import java.io.FileOutputStream;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+
+public class FilesTest {
+    public static void main(String[] args) throws Exception {
+        //Demonstrate the usage of Files class
+        String path = "src//file//FilesTest.java";
+        Files.copy(Paths.get(path), new FileOutputStream("src//file//a.txt"));
+
+        //judge whether the FilesTest.java is hidden or not
+        System.out.println("Is the FilesTest.java hidden:" + Files.isHidden(Paths.get(path)));
+        //Read all line of FileTest.java
+        List<String> lists = Files.readAllLines(Paths.get(path), Charset.forName("gbk"));
+        System.out.println(lists);
+        System.out.println("Files.java's size is : " + Files.size(Paths.get(path)));
+
+
+    }
+}
