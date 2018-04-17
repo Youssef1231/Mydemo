@@ -8,10 +8,9 @@ public class RandomAccessDemo {
 		//new RandomAccess
 
 		try (
-				RandomAccessFile ra = new RandomAccessFile("src\\file\\RandomAccessDemo.java", "r")) {
-			System.out.println("Initial position is ：" + ra.getFilePointer());
+				RandomAccessFile ra = new RandomAccessFile("src//file//RandomAccessDemo.java", "r")) {
+			System.out.println("初始位置为：" + ra.getFilePointer());
 			ra.seek(300);
-			System.out.println("And now the position is ：" + ra.getFilePointer());
 			// read from 300 position
 			byte[] bbuf = new byte[1024];
 			int hasRead = 0;
@@ -20,14 +19,6 @@ public class RandomAccessDemo {
 			}
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
-		}
-		try (
-				RandomAccessFile raf = new RandomAccessFile("src\\file\\out.txt", "rw")) {
-			raf.seek(raf.length());
-			raf.write("This is added thing\r\n".getBytes());
-//			System.out.println(raf);
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 
 	}
