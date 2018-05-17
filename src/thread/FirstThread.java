@@ -19,6 +19,7 @@ public class FirstThread extends Thread{
                 new FirstThread().start();
                 //create the second thread
                 new FirstThread().start();
+                
             }
         }
     }
